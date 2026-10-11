@@ -1,0 +1,49 @@
+
+{%extends "template.html"%}
+<html>
+
+{%block body%}
+    <div id="feriv_box">
+        <form id="form-register" method="post">
+            {% csrf_token %}
+            <h1>регистрация</h1>
+            <p id="feriv_text">имя:</p>
+            <input type="text" name="name" placeholder="введите имя">
+            <p id="feriv_text">возраст:</p>
+            <input type="text" name="age" placeholder="введите возраст">
+            <p id="feriv_text">ник (не более 10 символов):</p>
+            <input type="text" name="nickname" placeholder='придумайте свой никнейм '>
+            <p id="feriv_text">пароль:</p>
+            <input type="password" name="password" placeholder="придумайте пароль">
+            <br>
+            <input type="submit" name="verification" value="зарегаться" id="sign_in">
+            <button type="button" id="form-button" onclick="showLogin()">есть акаунт? войти</button>
+        </form>
+
+        <form id="form-login" style="display: none;" method="post">
+            {% csrf_token %}
+            <h1>логин</h1>
+            <p id="feriv_text">ник:</p>
+            <input type="text" name="nickname" placeholder='напишите никнейм'>
+            <p id="feriv_text">пароль:</p>
+            <input type="password" name="password" placeholder="напишите пароль">
+            <br>
+            <input type="submit" name="verification" value="войти" id="sign_in">
+            <button type="button" id="form-button" onclick="showRegistration()">нет акаунта? зарегаться</button>
+        </form>
+    </div>
+
+
+    <script>
+        function showLogin() {
+            document.getElementById('form-login').style.display = 'block';
+            document.getElementById('form-register').style.display = 'none';
+    }
+
+        function showRegistration() {
+                document.getElementById('form-login').style.display = 'none';
+                document.getElementById('form-register').style.display = 'block';
+        }
+    </script>
+    {%endblock body%}
+</html>

@@ -1,0 +1,165 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+
+    
+}
+a{
+    text-decoration: none;
+}
+h1{
+
+    position: relative;
+    left: 25%;;
+    width: 49.5%;
+    background-color: rgb(252, 226, 192);
+    margin: 5% 2% 0% 0%;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+p{
+    position: relative;
+
+}
+#feriv_text{
+
+    left: 25%;
+    width: 50%;
+    font-size: 150% ;
+    margin: 1% 0%;
+
+}
+body{
+    background-color: rgb(255, 241, 224);
+
+}
+input,textarea{
+    margin: 0 0 0 25% ;
+    width: 49%;
+    font-size: 150% ;
+    background-color: rgb(252, 226, 192);
+
+    
+
+}
+
+#answer_button{
+    margin-top: 2.5%;
+    border-radius: 50px;
+    width: 50%;
+    font-size: 150% ;
+    background-color: rgb(252, 226, 192);
+}
+
+#textarea_question{
+    margin: 0 0 0 5%;
+    width: 90%;
+    height: 50%;
+    resize: none;
+    border: 2.5px solid black;
+    border-radius: 15px;
+}
+button{
+    
+    font-size: 125%;
+    background-color: rgb(253, 231, 201);
+    border: 0px;
+
+}
+button:hover,input:hover{
+    background-color: rgb(253, 206, 145)
+}
+
+#head-button{
+margin: 0% 5%;
+font-size: 150%;
+display: inline;
+border-radius: 50px;
+
+}
+
+#sign_in{
+    width: 24.75%;
+    height: 50px;
+    border-radius: 50px;
+}
+
+#feriv_box,#question_box{
+    width: 50%;
+    
+    
+    box-shadow: 5px 5px 25px 5px rgb(172, 167, 167);
+    border: 2.5px solid rgb(0, 0, 0);
+}
+#feriv_box{
+    margin: 2.5% 25%;
+    border-radius:50px ;
+}
+#question_box{
+    border-radius:25px ;
+    margin: 0% 25% 5% 25%;
+}
+
+
+#create_question_text{
+    width: 50%;
+    font-size: 150% ;
+    margin: 1% 5%;
+}
+
+#question_text{
+
+    font-size: 125% ;
+    margin: 1% 2.5%;
+    text-align: left;
+
+}
+
+#answer_text{
+    margin: 0% 25% 5% 25%;
+    font-size: 150%;
+}
+#no_answer_text{
+    margin: 0% 25% 5% 25%;
+    font-size: 150%;
+    text-align: center
+}
+
+#date{
+    font-size: 100% ;
+    margin: 1% 2.5%;
+    text-align: right;
+}
+
+
+#form-button{
+    width: 24.75%;
+    margin: 2% 0%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    height: 50px;
+}
+
+#head{
+    margin:0% 0% 5% 0%;
+}
+#head-p{
+    margin: 0% 10% 0% 5%;
+    display: inline;
+    font-size: 120%;
+    max-height: 25%;
+    
+}
+
+
+
+@media screen and (min-height:900px) {
+    h1{
+        margin: 25% 2% 0% 0%;
+    }
+    #feriv{
+        margin: 45% 25%;
+    }
+}

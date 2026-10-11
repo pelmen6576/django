@@ -1,0 +1,47 @@
+{%extends "template.html"%}
+
+<html>
+    {%block body%}
+        <div id="head">
+            <p id="head-p">{{nickname}}</p>
+            <a href="/about"><button id="head-button">домой</button></a>
+            <a href="/about/create_question"><button id="head-button">задать вопрос</button></a>
+            <a href="/about/my_questions"><button id="head-button">мои вопросы</button></a>
+        <form style='display: inline;', method="post">
+            {% csrf_token %}
+            <button type="submit"  id="head-button">выход</button>
+        </form>
+        </div>
+
+        <div id="question_box">
+            <p id="question_text" style="font-weight: 900;">{{i.id_persons.nickname}}</p>
+            <p id="question_text">{{i.questions}}</p>
+            <p id="date">{{i.date}}</p>
+        </div>
+        <p id="answer_text">ответы:</p>
+        {%if len == 0 %}
+        <P id="no_answer_text"></style>нет ответов:(</P>
+        {%else%}
+        {%for J in  answers%}
+        <div id="question_box">
+            <p id="question_text" style="font-weight: 900;">{{J.id_persons.nickname}}</p>
+            <p id="question_text">{{J.answers}}</p>
+            <p id="date">{{J.date}}</p>
+        </div>
+        {%endfor%}
+        {%endif%}
+        <div id="question_box">
+        
+        <form method="post">
+            {% csrf_token %}
+            <p id='question_text'>знаете ответ?</p>
+            <textarea name="answer" id="textarea_question"  placeholder="напишите свой ответ"></textarea>
+            <a href="/about/question?id={{i.id}}"><input type="submit" value="отправить" id="answer_button"></a>
+
+        </form>
+        </div>
+    {%endblock body%}
+
+
+
+</html>

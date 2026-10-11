@@ -1,0 +1,28 @@
+{%extends "template.html"%}
+<html>
+    {%block body%}
+        <div id="head">
+            <p id="head-p">{{nickname}}</p>
+            <a href="/about"><button id="head-button">домой</button></a>
+            <a href="/about/create_question"><button id="head-button">задать вопрос</button></a>
+            <a href="/about/my_questions"><button id="head-button">мои вопросы</button></a>
+        <form style='display: inline;', method="post">
+            {% csrf_token %}
+            <button type="submit"  id="head-button">выход</button>
+        </form>
+        </div>
+        <div id="question_box">
+            <form method="post">
+                {% csrf_token %}
+                <p id="create_question_text">задайте вопрос:</p>
+                <textarea name="question" id="textarea_question" placeholder="напишите свой вопрос"></textarea>
+                <input id="sign_in" type="submit" name="create_question" value="отправить">
+                <input type="submit" name="create_question" value="отмена" id="form-button">
+
+            </form>
+
+        </div>
+    {%endblock body%}
+
+
+</html>
